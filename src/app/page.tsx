@@ -12,7 +12,7 @@ interface Prediction {
 const loadTensorFlow = async () => {
   const [tf, mobilenet] = await Promise.all([
     import("@tensorflow/tfjs"),
-    import("@tensorflow-models/mobilenet")
+    import("@tensorflow-models/mobilenet"),
   ]);
   return { tf, mobilenet };
 };
@@ -30,18 +30,18 @@ export default function Home() {
   // Model yükleme - lazy loading ile
   const initializeModel = useCallback(async () => {
     if (isModelInitialized || isModelLoading) return;
-    
+
     setIsModelLoading(true);
     try {
       console.log("TensorFlow.js lazy loading başlıyor...");
       const { tf, mobilenet } = await loadTensorFlow();
-      
+
       console.log("TensorFlow.js hazırlanıyor...");
       await tf.ready();
-      
+
       console.log("MobileNet modeli yükleniyor...");
       const loadedModel = await mobilenet.load();
-      
+
       setModel(loadedModel);
       setIsModelInitialized(true);
       console.log("Model başarıyla yüklendi!");
@@ -290,7 +290,9 @@ export default function Home() {
                     </button>
                   </div>
                 ) : (
-                  <p className="text-gray-500">Görüntü yüklendi, analiz için tıklayın</p>
+                  <p className="text-gray-500">
+                    Görüntü yüklendi, analiz için tıklayın
+                  </p>
                 )}
               </div>
             ) : (

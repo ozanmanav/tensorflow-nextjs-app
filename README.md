@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AI Image Recognition App
 
-## Getting Started
+Modern image classification app powered by **TensorFlow.js** and **MobileNet** built with **Next.js**.
 
-First, run the development server:
+## ✨ Features
+
+- 🚀 **Instant Page Loading** - Lazy loading optimized performance
+- 🧠 **AI Image Recognition** - MobileNet model with 1000+ object classes
+- ⚡ **Real-time Analysis** - Instant prediction results
+- 🎨 **Modern UI/UX** - Clean interface with Tailwind CSS
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js 15, React 18, TypeScript
+- **AI/ML:** TensorFlow.js, MobileNet
+- **Styling:** Tailwind CSS
+- **Performance:** Dynamic Imports, Lazy Loading
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended) or npm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repository
+git clone <repository-url>
+cd tensorflow-nextjs-app
+
+# Install dependencies
+pnpm install
+
+# Start development server
 pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Upload Image:** Click "Choose File" or select sample image
+2. **AI Analysis:** Model loads automatically when image is selected
+3. **View Results:** Get top 5 predictions with confidence scores
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚡ Performance Features
 
-## Learn More
+- **Lazy Loading:** TensorFlow.js loads only when needed
+- **Instant Page Load:** No blocking AI model loading
+- **Optimized Bundle:** Dynamic imports reduce initial load time
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Supported Objects
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MobileNet recognizes **1000+** object classes including:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Animals, Vehicles, Food, Electronics, Household items, etc.
 
-## Deploy on Vercel
+## 📊 Model Info
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Model:** MobileNet v2
+- **Size:** ~13MB (lazy loaded)
+- **Accuracy:** 71.3% top-1 on ImageNet
+- **Inference:** ~100-300ms
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+⭐ **Star this project if you find it useful!**
